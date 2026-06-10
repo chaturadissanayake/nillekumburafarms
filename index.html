@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nillekumbura Farms, free-range eggs and chicken from Menikhinna, Kandy. Raised ethically, sold direct. No middlemen, no cold storage.">
+<title>Nillekumbura Farms | Fresh from Menikhinna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Sinhala:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta name="theme-color" content="#F5F1E8">
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+
+<nav id="navbar" class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="nav-logo">Nillekumbura Farms</a>
+        <div class="nav-links desktop-only">
+            <a href="#products" class="nav-link">Products</a>
+            <a href="#how-to-order" class="nav-link">How to Order</a>
+            <a href="#story" class="nav-link">Our Story</a>
+            <a href="#people" class="nav-link">Our People</a>
+            <a href="#gallery" class="nav-link">Gallery</a>
+            <a href="#inquiry" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button id="lang-toggle" class="lang-toggle desktop-only" aria-label="Switch Language">සිංහල</button>
+            <a href="https://wa.me/94700000000" target="_blank" rel="noopener noreferrer" class="btn-whatsapp desktop-only" aria-label="Order on WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                <span>Order</span>
+            </a>
+            <button id="mobile-menu-btn" class="hamburger mobile-only" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div id="mobile-backdrop" class="mobile-backdrop"></div>
+<div id="mobile-menu" class="mobile-overlay">
+    <div class="mobile-menu-header">
+        <span class="mobile-menu-location">Menikhinna, Kandy</span>
+        <div class="mobile-header-actions">
+            <button class="lang-toggle lang-toggle-mobile" aria-label="Switch Language">සිංහල</button>
+            <button id="mobile-menu-close" class="hamburger open" aria-label="Close menu">
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+            </button>
+        </div>
+    </div>
+    <div class="mobile-nav-content">
+        <a href="#products" class="mobile-link">Products</a>
+        <a href="#how-to-order" class="mobile-link">How to Order</a>
+        <a href="#story" class="mobile-link">Our Story</a>
+        <a href="#people" class="mobile-link">Our People</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#inquiry" class="mobile-link">Contact</a>
+
+        <div class="mobile-nav-section-title">SOCIALS</div>
+        <a href="#" class="mobile-link-sm" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#" class="mobile-link-sm" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://wa.me/94700000000" class="btn btn-whatsapp full-width mt-sm" style="justify-content: center;" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order on WhatsApp
+        </a>
+
+        <div class="mobile-nav-section-title">LEGAL</div>
+        <a href="privacy.html" class="mobile-link-sm">Privacy Policy</a>
+        <a href="terms.html" class="mobile-link-sm">Terms of Service</a>
+        <button type="button" class="mobile-link-sm" id="mobile-cookie-settings">Cookie Settings</button>
+    </div>
+</div>
+
+<header class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-content">
+            <span class="eyebrow" data-i18n="hero_eyebrow">Menikhinna, Kandy</span>
+            <h1 class="hero-title serif stagger-text" data-i18n="hero_headline">Fresh from our farm.</h1>
+            <p class="hero-sub reveal in-view" data-i18n="hero_sub">Farm-fresh eggs and chicken, raised with care in structured environments. No middlemen, no cold storage. Just real food, direct from Menikhinna to your family.</p>
+            <div class="hero-actions reveal in-view">
+                <a href="#products" class="btn btn-primary" data-i18n="hero_cta_primary">Shop the Harvest</a>
+                <a href="https://wa.me/94700000000" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" data-i18n="hero_cta_secondary">Order on WhatsApp</a>
+            </div>
+            <p class="hero-trust reveal in-view">
+                <span>Fresh daily</span>
+                <span>No cold storage</span>
+            </p>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="assets/heroimage.webp" alt="Nillekumbura Farm landscape" class="img-placeholder hero-bg-img">
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="products" class="section bg-dark text-white section-target">
+        <div class="container">
+            <div class="text-center reveal-group mb-lg">
+                <span class="eyebrow" data-i18n="products_eyebrow">Current Harvest</span>
+                <h2 class="serif section-title" data-i18n="products_heading">What we grow</h2>
+            </div>
+            <div class="products-grid reveal-group">
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="assets/farmfresheggs.webp" alt="Freshly harvested farm eggs with vibrant brown shells" class="img-placeholder product-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3 class="serif">Farm Fresh Eggs</h3>
+                            <span class="price serif text-accent">Rs. 850 / Dozen</span>
+                        </div>
+                        <p class="text-muted mb-sm">Collected fresh every morning. Rich yolks and sturdy shells from carefully managed flocks.</p>
+                        <ul class="product-features">
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Freshly collected daily</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Secure, structured rearing</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Never cold-stored</li>
+                        </ul>
+                        <a href="https://wa.me/94700000000?text=I%20would%20like%20to%20order%20eggs" target="_blank" rel="noopener noreferrer" class="btn btn-secondary hero-outline-btn full-width mt-sm">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img-wrap">
+                        <img src="assets/freerangechicken.webp" alt="Premium clean free-range poultry portions ready for distribution" class="img-placeholder product-img">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-header">
+                            <h3 class="serif">Premium Chicken</h3>
+                            <span class="price serif text-accent">Rs. 1,400 / kg</span>
+                        </div>
+                        <p class="text-muted mb-sm">Reared in secure, clean shelters. Carefully managed, safely housed, and processed to order.</p>
+                        <ul class="product-features">
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Clean, natural feed inputs</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Safe, structured housing</li>
+                            <li><i class="ph-fill ph-check-circle text-accent"></i> Processed fresh to order</li>
+                        </ul>
+                        <a href="https://wa.me/94700000000?text=I%20would%20like%20to%20order%20chicken" target="_blank" rel="noopener noreferrer" class="btn btn-secondary hero-outline-btn full-width mt-sm">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                            Order on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-to-order" class="section bg-primary section-target">
+        <div class="container text-center">
+            <div class="reveal-group mb-lg">
+                <span class="eyebrow" data-i18n="order_eyebrow">How It Works</span>
+                <h2 class="serif section-title" data-i18n="order_heading">Ordering is simple.</h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item reveal-horizontal" style="transition-delay: 0ms;">
+                    <div class="step-icon">
+                        <i class="ph ph-chat-circle-text" style="font-size: 32px;"></i>
+                    </div>
+                    <h3 class="serif">Message us</h3>
+                    <p class="text-muted">Send your order on WhatsApp. Tell us what you need and how much. We'll confirm availability.</p>
+                </div>
+                <div class="step-item reveal-horizontal" style="transition-delay: 150ms;">
+                    <div class="step-icon">
+                        <i class="ph ph-package" style="font-size: 32px;"></i>
+                    </div>
+                    <h3 class="serif">We prepare it fresh</h3>
+                    <p class="text-muted">We collect or prepare your order that morning. Nothing sits in a cold room.</p>
+                </div>
+                <div class="step-item reveal-horizontal" style="transition-delay: 300ms;">
+                    <div class="step-icon">
+                        <i class="ph ph-truck" style="font-size: 32px;"></i>
+                    </div>
+                    <h3 class="serif">Pick up or we deliver</h3>
+                    <p class="text-muted">Collect from the farm in Menikhinna, or arrange local delivery.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="section bg-secondary section-target">
+        <div class="container layout-split">
+            <div class="text-col reveal-group">
+                <span class="eyebrow" data-i18n="story_eyebrow">Our Story</span>
+                <h2 class="serif section-title" data-i18n="story_heading">A family farm.<br>Nothing more, nothing less.</h2>
+                <p>We started with a small flock of chickens in our backyard and a belief that Kandy families deserve food they can actually trust.</p>
+                <p>Every egg is collected fresh each morning. Every bird is reared in a clean, carefully monitored shelter. We manage our flock closely to ensure safety and quality. This is not a factory. It's our home.</p>
+                <p>We believe that caring for the land and caring for the community are not separate things. That's why we farm the way we do, not because it's easy, but because it's right.</p>
+            </div>
+            <div class="image-col reveal">
+                <img src="assets/ourstoryimage.webp" alt="Poultry flock in clean, spacious shelter conditions" class="img-placeholder img-arch">
+            </div>
+        </div>
+    </section>
+
+    <section id="our-practice" class="section bg-primary section-target">
+        <div class="container">
+            <div class="text-center reveal-group mb-lg">
+                <span class="eyebrow">How We Farm</span>
+                <h2 class="serif section-title">Grown with intention.</h2>
+                <p class="text-muted" style="max-width: 560px; margin: 0 auto;">We don't use the word sustainable lightly. Here's what it means in practice, every day, on this farm.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item reveal-horizontal" style="transition-delay: 0ms;">
+                    <div class="step-icon">
+                        <i class="ph ph-buildings" style="font-size: 32px;"></i>
+                    </div>
+                    <h3 class="serif">Safe & Structured.</h3>
+                    <p class="text-muted">Our birds are housed in secure, structured environments designed to protect them from the elements and predators, ensuring a consistent and safe supply.</p>
+                </div>
+                <div class="step-item reveal-horizontal" style="transition-delay: 150ms;">
+                    <div class="step-icon">
+                        <i class="ph ph-leaf" style="font-size: 32px;"></i>
+                    </div>
+                    <h3 class="serif">Clean inputs only.</h3>
+                    <p class="text-muted">We maintain strict hygiene and feed standards. Animal waste is composted and returned to the land, keeping the local soil cycle intact.</p>
+                </div>
+                <div class="step-item reveal-horizontal" style="transition-delay: 300ms;">
+                    <div class="step-icon">
+                        <i class="ph ph-arrows-in-line-horizontal" style="font-size: 32px;"></i>
+                    </div>
+                    <h3 class="serif">Short supply chain.</h3>
+                    <p class="text-muted">By selling directly, no distributor, no cold storage, no supermarket markup, we cut food miles, reduce packaging waste, and keep income within the Menikhinna community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="people" class="section bg-secondary section-target">
+        <div class="container">
+            <div class="text-center reveal-group mb-lg">
+                <span class="eyebrow" data-i18n="founders_eyebrow">Who we are</span>
+                <h2 class="serif section-title">The faces behind the farm.</h2>
+            </div>
+            
+            <div class="founders-layout">
+                <div class="founder-col reveal">
+                    <img src="assets/visualsloading.webp" alt="Anil Nillekumbura" class="img-placeholder founder-img">
+                    <div class="founder-meta">
+                        <h3 class="serif">Anil Nillekumbura</h3>
+                        <span class="role text-accent">CO-FOUNDER</span>
+                        <p class="text-muted">Dedicated to the ethical rearing of our flock and the meticulous daily operations of the farm.</p>
+                    </div>
+                </div>
+
+                <div class="founder-col reveal">
+                    <img src="assets/visualsloading.webp" alt="Shermila Palamkumbura" class="img-placeholder founder-img">
+                    <div class="founder-meta">
+                        <h3 class="serif">Shermila Palamkumbura</h3>
+                        <span class="role text-accent">CO-FOUNDER</span>
+                        <p class="text-muted">Managing customer relations, product quality, and nurturing the community that supports our vision.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section bg-primary section-target">
+        <div class="container">
+            <div class="text-center reveal-group mb-lg">
+                <span class="eyebrow">The Farm</span>
+                <h2 class="serif section-title">From sunrise to harvest.</h2>
+            </div>
+            <div class="gallery-grid reveal-group">
+                <div class="gallery-item"><img src="assets/collectingeggs.webp" alt="Hand gathering fresh eggs from coops in early morning sunshine" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item span-row-2"><img src="assets/farmlandscape.webp" alt="Scenic green pastures of Nillekumbura Farm in Menikhinna Kandy" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item"><img src="assets/sortingeggs.webp" alt="Meticulous morning sorting and checking process for shell rigidity" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item"><img src="assets/flockoutdoors.webp" alt="Free range flock roaming outdoors within natural perimeter spaces" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item"><img src="assets/packingeggs.webp" alt="Careful packaging setup inside sustainable collection trays" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item span-col-3"><img src="assets/panaromicfarm.webp" alt="Panoramic landscape view of the agricultural plots around the farm grounds" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="coming-soon" class="section bg-dark text-white section-target">
+        <div class="container">
+            <div class="expanding-grid">
+                <div class="expanding-main reveal">
+                    <img src="assets/harvestexpanding.webp" alt="Lush agricultural landscape showing the expansion of our farm" class="img-placeholder">
+                    <span class="eyebrow">Growing Soon</span>
+                    <h2 class="serif section-title">The harvest is expanding.</h2>
+                    <p class="text-muted">Everything we make starts on this farm. As we grow, we're expanding into value-added products that use our own produce, reducing waste, extending the harvest, and keeping the full supply chain within Menikhinna. Sign up below for early access.</p>
+                </div>
+                <div class="expanding-items reveal-group">
+                    <div class="expanding-card">
+                        <img src="assets/farmfood.webp" alt="Farm Food" class="img-placeholder">
+                        <h4 class="serif">Farm Food</h4>
+                        <p class="text-muted small">Home-cooked meals made entirely with our own produce. No outsourced ingredients.</p>
+                    </div>
+                    <div class="expanding-card">
+                        <img src="assets/homemadejam.webp" alt="Homemade Jams" class="img-placeholder">
+                        <h4 class="serif">Homemade Jams</h4>
+                        <p class="text-muted small">Slow-cooked from surplus seasonal fruit. Minimal processing, zero preservatives.</p>
+                    </div>
+                    <div class="expanding-card">
+                        <img src="assets/purehoney.webp" alt="Pure Honey" class="img-placeholder">
+                        <h4 class="serif">Pure Honey</h4>
+                        <p class="text-muted small">Raw, unfiltered, straight from the comb. Supporting natural pollination across the farm.</p>
+                    </div>
+                    <div class="expanding-card">
+                        <img src="assets/juices.webp" alt="Fresh Juices & Flowers" class="img-placeholder">
+                        <h4 class="serif">Juices & Blooms</h4>
+                        <p class="text-muted small">Cold-pressed from what the season gives us. Cut flowers grown without synthetic chemicals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section bg-primary section-target">
+        <div class="container text-center">
+            <div class="reveal-group mb-lg">
+                <span class="eyebrow">Word of Mouth</span>
+                <h2 class="serif section-title">From the community.</h2>
+            </div>
+            <div class="testimonials-grid reveal-group">
+                <div class="testimonial-card">
+                    <span class="quote-mark text-accent serif">"</span>
+                    <p class="quote-text">The eggs are unlike anything from a shop. The yolks are a deep orange. My family won't go back.</p>
+                    <span class="author eyebrow">— Priya, Kandy</span>
+                </div>
+                <div class="testimonial-card">
+                    <span class="quote-mark text-accent serif">"</span>
+                    <p class="quote-text">Anil delivered the chicken the same morning I ordered. It was still warm. Exceptional.</p>
+                    <span class="author eyebrow">— Ruwan, Menikhinna</span>
+                </div>
+                <div class="testimonial-card">
+                    <span class="quote-mark text-accent serif">"</span>
+                    <p class="quote-text">Knowing the people who grow your food makes it taste better. Simple as that.</p>
+                    <span class="author eyebrow">— Dilini, Peradeniya</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subscribe" class="section bg-accent text-white text-center section-target">
+        <div class="container max-w-sm reveal-group">
+            <h2 class="serif section-title" data-i18n="subscribe_heading">Be a regular.</h2>
+            <p class="mb-md">Join our weekly harvest list. We'll message you every Sunday with what's available. No spam, just fresh produce.</p>
+            <form id="subscribe-form" class="subscribe-form">
+                <div class="form-group row">
+                    <input type="email" id="sub-email" placeholder="Enter your email address" required aria-label="Email address">
+                    <button type="submit" class="btn btn-dark">Join the list</button>
+                </div>
+                <div id="sub-success" class="form-success hidden">You're in. We'll be in touch on Sunday.</div>
+                <div id="sub-error" class="form-error hidden">There was a technical issue. Please try again later or contact us on WhatsApp.</div>
+            </form>
+            <p class="small-print mt-sm">We only contact you about harvest availability. Unsubscribe anytime by messaging us on WhatsApp.</p>
+        </div>
+    </section>
+
+    <section id="inquiry" class="section bg-primary section-target">
+        <div class="container">
+            <div class="text-center reveal-group mb-lg">
+                <span class="eyebrow" data-i18n="contact_eyebrow">Contact</span>
+                <h2 class="serif section-title" data-i18n="contact_heading">We're just a message away.</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="map-container reveal">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31700!2d80.6!3d7.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368b0f1234567%3A0x1!2sMenikhinna%2C+Kandy!5e0!3m2!1sen!2slk!4v1" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Nillekumbura Farms Location"></iframe>
+                </div>
+                <div class="form-container reveal">
+                    <form id="inquiry-form" class="inquiry-form">
+                        <div class="form-group">
+                            <label for="inq-name">Your Name</label>
+                            <input type="text" id="inq-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="inq-phone">WhatsApp Number</label>
+                            <input type="tel" id="inq-phone" required>
+                        </div>
+                        <div class="form-group select-wrapper">
+                            <label for="inq-interest">What are you looking for?</label>
+                            <select id="inq-interest" required>
+                                <option value="" disabled selected>Select an option...</option>
+                                <option value="eggs">Fresh Eggs</option>
+                                <option value="chicken">Chicken</option>
+                                <option value="upcoming">Future Harvests</option>
+                                <option value="other">General Question</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="inq-message">Message</label>
+                            <textarea id="inq-message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">Send Message</button>
+                        <div id="inq-success" class="form-success hidden mt-sm">Thanks. We will reply on WhatsApp shortly.</div>
+                        <div id="inq-error" class="form-error hidden mt-sm">There was a technical issue. Please check again later, send an email to hello@nillekumburafarms.com, or talk to us on WhatsApp.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer bg-dark text-white">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2 class="serif text-large">Nillekumbura Farms</h2>
+                <p>190 Malgahamula - Galaluwa Rd<br>Menikhinna, Kandy<br>Sri Lanka</p>
+                <p class="mt-xs">+94 70 000 0000</p>
+                <a href="mailto:hello@nillekumburafarms.com" class="footer-link mt-xs" style="padding:0; min-height:auto;">hello@nillekumburafarms.com</a>
+                <p class="mt-sm footer-muted">Fresh from Menikhinna since 2025.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="eyebrow text-accent-sec">Sitemap</h4>
+                <a href="#products" class="footer-link">Products</a>
+                <a href="#how-to-order" class="footer-link">How to Order</a>
+                <a href="#story" class="footer-link">Our Story</a>
+                <a href="#people" class="footer-link">Our People</a>
+                <a href="#gallery" class="footer-link">Gallery</a>
+                <a href="#inquiry" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4 class="eyebrow text-accent-sec">Socials</h4>
+                <div class="social-links-inline">
+                    <a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://wa.me/94700000000" class="footer-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="eyebrow text-accent-sec">Legal</h4>
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                <a href="terms.html" class="footer-link">Terms of Service</a>
+                <button type="button" class="footer-link-btn" id="open-cookie-settings">Cookie Settings</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Nillekumbura Farms. All rights reserved.</p>
+            <p><a href="https://chaturadissanayake.vercel.app/" target="_blank" rel="noopener noreferrer">Made by Chatura Dissanayake</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<div id="newsletter-slide" class="newsletter-slide-in">
+    <button class="close-slide" aria-label="Close" onclick="document.getElementById('newsletter-slide').classList.remove('active');">×</button>
+    <span class="eyebrow">Stay Updated</span>
+    <h4 class="serif">Be a regular.</h4>
+    <p class="text-muted small mb-sm">Join our harvest list for weekly updates on what's available.</p>
+    <a href="#subscribe" class="btn btn-primary btn-sm full-width" onclick="document.getElementById('newsletter-slide').classList.remove('active');">Join the List</a>
+</div>
+
+<div id="cookie-banner" class="cookie-banner hidden">
+    <p>We use cookies to improve your experience. No tracking, no ads.</p>
+    <div class="cookie-actions">
+        <button id="cookie-decline" class="btn btn-secondary btn-sm">Decline</button>
+        <button id="cookie-accept" class="btn btn-primary btn-sm">Accept</button>
+    </div>
+</div>
+
+<a href="https://wa.me/94700000000" target="_blank" rel="noopener noreferrer" class="floating-wa" aria-label="Order on WhatsApp">
+    <span class="floating-wa-tooltip">Chat with us</span>
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<div id="lightbox" class="lightbox-modal">
+    <button class="lightbox-close" aria-label="Close image">×</button>
+    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Gallery View" class="lightbox-img">
+</div>
+
+<div id="toast-notification" class="toast hidden"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

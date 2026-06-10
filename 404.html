@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Not Found | Nillekumbura Farms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Sinhala:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta name="theme-color" content="#F5F1E8">
+<style>
+    .error-section {
+        min-height: calc(100vh - 80px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--bg-primary);
+        padding: 4rem 1.5rem;
+    }
+    .error-code {
+        font-family: var(--font-serif);
+        font-size: clamp(6rem, 15vw, 10rem);
+        color: var(--accent);
+        line-height: 1;
+        margin-bottom: 1rem;
+    }
+</style>
+</head>
+<body>
+
+<nav id="navbar" class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Nillekumbura Farms</a>
+        <div class="nav-links desktop-only">
+            <a href="index.html#products" class="nav-link">Products</a>
+            <a href="index.html#how-to-order" class="nav-link">How to Order</a>
+            <a href="index.html#story" class="nav-link">Our Story</a>
+            <a href="index.html#people" class="nav-link">Our People</a>
+            <a href="index.html#gallery" class="nav-link">Gallery</a>
+            <a href="index.html#inquiry" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="lang-toggle desktop-only" aria-label="Switch Language">සිංහල</button>
+            <a href="https://wa.me/94700000000" target="_blank" rel="noopener noreferrer" class="btn-whatsapp desktop-only" aria-label="Order on WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                <span>Order</span>
+            </a>
+            <button id="mobile-menu-btn" class="hamburger mobile-only" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div id="mobile-backdrop" class="mobile-backdrop"></div>
+<div id="mobile-menu" class="mobile-overlay">
+    <div class="mobile-menu-header">
+        <span class="nav-logo serif">Nillekumbura Farms</span>
+        <div class="mobile-header-actions">
+            <button class="lang-toggle lang-toggle-mobile" aria-label="Switch Language">සිංහල</button>
+            <button id="mobile-menu-close" class="hamburger open" aria-label="Close menu">
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+            </button>
+        </div>
+    </div>
+    <div class="mobile-nav-content">
+        <a href="index.html#products" class="mobile-link">Products</a>
+        <a href="index.html#how-to-order" class="mobile-link">How to Order</a>
+        <a href="index.html#story" class="mobile-link">Our Story</a>
+        <a href="index.html#people" class="mobile-link">Our People</a>
+        <a href="index.html#gallery" class="mobile-link">Gallery</a>
+        <a href="index.html#inquiry" class="mobile-link">Contact</a>
+        
+        <div class="mobile-nav-section-title">SOCIALS</div>
+        <a href="#" class="mobile-link-sm" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="#" class="mobile-link-sm" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://wa.me/94700000000" class="btn btn-whatsapp full-width mt-sm" style="justify-content: center;" target="_blank" rel="noopener noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="flex-shrink: 0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.888-.788-1.487-1.761-1.663-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order on WhatsApp
+        </a>
+
+        <div class="mobile-nav-section-title">LEGAL</div>
+        <a href="privacy.html" class="mobile-link-sm">Privacy Policy</a>
+        <a href="terms.html" class="mobile-link-sm">Terms of Service</a>
+        <button type="button" class="mobile-link-sm" id="mobile-cookie-settings">Cookie Settings</button>
+    </div>
+</div>
+
+<main class="error-section">
+    <div class="container reveal-group">
+        <h1 class="error-code reveal">404</h1>
+        <h2 class="serif section-title reveal">We couldn't find that page.</h2>
+        <p class="text-muted mb-lg reveal">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <div class="reveal">
+            <a href="index.html" class="btn btn-primary btn-large">Return to Farm</a>
+        </div>
+    </div>
+</main>
+
+<footer class="footer bg-dark text-white">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h2 class="serif text-large">Nillekumbura Farms</h2>
+                <p>190 Malgahamula - Galaluwa Rd<br>Menikhinna, Kandy<br>Sri Lanka</p>
+                <p class="mt-xs">+94 70 000 0000</p>
+                <a href="mailto:hello@nillekumburafarms.com" class="footer-link mt-xs" style="padding:0; min-height:auto;">hello@nillekumburafarms.com</a>
+                <p class="mt-sm footer-muted">Fresh from Menikhinna since 2025.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="eyebrow text-accent-sec">Sitemap</h4>
+                <a href="index.html#products" class="footer-link">Products</a>
+                <a href="index.html#how-to-order" class="footer-link">How to Order</a>
+                <a href="index.html#story" class="footer-link">Our Story</a>
+                <a href="index.html#people" class="footer-link">Our People</a>
+                <a href="index.html#gallery" class="footer-link">Gallery</a>
+                <a href="index.html#inquiry" class="footer-link">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4 class="eyebrow text-accent-sec">Socials</h4>
+                <div class="social-links-inline">
+                    <a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#" class="footer-link" target="_blank" rel="noopener noreferrer">Facebook</a>
+                    <a href="https://wa.me/94700000000" class="footer-link" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4 class="eyebrow text-accent-sec">Legal</h4>
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                <a href="terms.html" class="footer-link">Terms of Service</a>
+                <button type="button" class="footer-link-btn" id="open-cookie-settings">Cookie Settings</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Nillekumbura Farms. All rights reserved.</p>
+            <p><a href="https://chaturadissanayake.vercel.app/" target="_blank" rel="noopener noreferrer">Made by Chatura Dissanayake</a>.</p>
+        </div>
+    </div>
+</footer>
+
+<div id="toast-notification" class="toast hidden"></div>
+<script src="script.js"></script>
+</body>
+</html>
