@@ -9,13 +9,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Sans+Sinhala:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+<link rel="manifest" href="assets/site.webmanifest">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
 <meta name="theme-color" content="#F5F1E8">
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 </head>
 <body>
 
@@ -95,7 +95,7 @@
             </p>
         </div>
         <div class="hero-image-wrapper">
-            <img src="assets/heroimage.webp" alt="Nillekumbura Farm landscape" class="img-placeholder hero-bg-img">
+            <img src="assets/heroimage.webp" alt="Nillekumbura Farm landscape" class="img-placeholder hero-bg-img" fetchpriority="high" width="1920" height="1080">
         </div>
     </div>
 </header>
@@ -110,7 +110,7 @@
             <div class="products-grid reveal-group">
                 <div class="product-card">
                     <div class="product-img-wrap">
-                        <img src="assets/farmfresheggs.webp" alt="Freshly harvested farm eggs with vibrant brown shells" class="img-placeholder product-img">
+                        <img src="assets/farmfresheggs.webp" alt="Freshly harvested farm eggs with vibrant brown shells" class="img-placeholder product-img" loading="lazy" width="800" height="1067">
                     </div>
                     <div class="product-info">
                         <div class="product-header">
@@ -131,7 +131,7 @@
                 </div>
                 <div class="product-card">
                     <div class="product-img-wrap">
-                        <img src="assets/freerangechicken.webp" alt="Premium clean free-range poultry portions ready for distribution" class="img-placeholder product-img">
+                        <img src="assets/freerangechicken.webp" alt="Premium clean free-range poultry portions ready for distribution" class="img-placeholder product-img" loading="lazy" width="800" height="1067">
                     </div>
                     <div class="product-info">
                         <div class="product-header">
@@ -196,7 +196,7 @@
                 <p>We believe that caring for the land and caring for the community are not separate things. That's why we farm the way we do, not because it's easy, but because it's right.</p>
             </div>
             <div class="image-col reveal">
-                <img src="assets/ourstoryimage.webp" alt="Poultry flock in clean, spacious shelter conditions" class="img-placeholder img-arch">
+                <img src="assets/ourstoryimage.webp" alt="Poultry flock in clean, spacious shelter conditions" class="img-placeholder img-arch" loading="lazy" width="800" height="1067">
             </div>
         </div>
     </section>
@@ -243,7 +243,7 @@
             
             <div class="founders-layout">
                 <div class="founder-col reveal">
-                    <img src="assets/visualsloading.webp" alt="Anil Nillekumbura" class="img-placeholder founder-img">
+                    <img src="assets/visualsloading.webp" alt="Anil Nillekumbura" class="img-placeholder founder-img" loading="lazy" width="800" height="1000">
                     <div class="founder-meta">
                         <h3 class="serif">Anil Nillekumbura</h3>
                         <span class="role text-accent">CO-FOUNDER</span>
@@ -252,7 +252,7 @@
                 </div>
 
                 <div class="founder-col reveal">
-                    <img src="assets/visualsloading.webp" alt="Shermila Palamkumbura" class="img-placeholder founder-img">
+                    <img src="assets/visualsloading.webp" alt="Shermila Palamkumbura" class="img-placeholder founder-img" loading="lazy" width="800" height="1000">
                     <div class="founder-meta">
                         <h3 class="serif">Shermila Palamkumbura</h3>
                         <span class="role text-accent">CO-FOUNDER</span>
@@ -270,12 +270,12 @@
                 <h2 class="serif section-title">From sunrise to harvest.</h2>
             </div>
             <div class="gallery-grid reveal-group">
-                <div class="gallery-item"><img src="assets/collectingeggs.webp" alt="Hand gathering fresh eggs from coops in early morning sunshine" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
-                <div class="gallery-item span-row-2"><img src="assets/farmlandscape.webp" alt="Scenic green pastures of Nillekumbura Farm in Menikhinna Kandy" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
-                <div class="gallery-item"><img src="assets/sortingeggs.webp" alt="Meticulous morning sorting and checking process for shell rigidity" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
-                <div class="gallery-item"><img src="assets/flockoutdoors.webp" alt="Free range flock roaming outdoors within natural perimeter spaces" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
-                <div class="gallery-item"><img src="assets/packingeggs.webp" alt="Careful packaging setup inside sustainable collection trays" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
-                <div class="gallery-item span-col-3"><img src="assets/panaromicfarm.webp" alt="Panoramic landscape view of the agricultural plots around the farm grounds" class="img-placeholder" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item"><img src="assets/collectingeggs.webp" alt="Hand gathering fresh eggs from coops in early morning sunshine" class="img-placeholder" loading="lazy" width="600" height="250" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item span-row-2"><img src="assets/farmlandscape.webp" alt="Scenic green pastures of Nillekumbura Farm in Menikhinna Kandy" class="img-placeholder" loading="lazy" width="600" height="516" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item"><img src="assets/sortingeggs.webp" alt="Meticulous morning sorting and checking process for shell rigidity" class="img-placeholder" loading="lazy" width="600" height="250" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item"><img src="assets/flockoutdoors.webp" alt="Free range flock roaming outdoors within natural perimeter spaces" class="img-placeholder" loading="lazy" width="600" height="250" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item"><img src="assets/packingeggs.webp" alt="Careful packaging setup inside sustainable collection trays" class="img-placeholder" loading="lazy" width="600" height="250" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
+                <div class="gallery-item span-col-3"><img src="assets/panaromicfarm.webp" alt="Panoramic landscape view of the agricultural plots around the farm grounds" class="img-placeholder" loading="lazy" width="1200" height="250" tabindex="0" role="button" aria-label="View enlarged farm image"></div>
             </div>
         </div>
     </section>
@@ -284,29 +284,29 @@
         <div class="container">
             <div class="expanding-grid">
                 <div class="expanding-main reveal">
-                    <img src="assets/harvestexpanding.webp" alt="Lush agricultural landscape showing the expansion of our farm" class="img-placeholder">
+                    <img src="assets/harvestexpanding.webp" alt="Lush agricultural landscape showing the expansion of our farm" class="img-placeholder" loading="lazy" width="800" height="450">
                     <span class="eyebrow">Growing Soon</span>
                     <h2 class="serif section-title">The harvest is expanding.</h2>
                     <p class="text-muted">Everything we make starts on this farm. As we grow, we're expanding into value-added products that use our own produce, reducing waste, extending the harvest, and keeping the full supply chain within Menikhinna. Sign up below for early access.</p>
                 </div>
                 <div class="expanding-items reveal-group">
                     <div class="expanding-card">
-                        <img src="assets/farmfood.webp" alt="Farm Food" class="img-placeholder">
+                        <img src="assets/farmfood.webp" alt="Farm Food" class="img-placeholder" loading="lazy" width="400" height="300">
                         <h4 class="serif">Farm Food</h4>
                         <p class="text-muted small">Home-cooked meals made entirely with our own produce. No outsourced ingredients.</p>
                     </div>
                     <div class="expanding-card">
-                        <img src="assets/homemadejam.webp" alt="Homemade Jams" class="img-placeholder">
+                        <img src="assets/homemadejam.webp" alt="Homemade Jams" class="img-placeholder" loading="lazy" width="400" height="300">
                         <h4 class="serif">Homemade Jams</h4>
                         <p class="text-muted small">Slow-cooked from surplus seasonal fruit. Minimal processing, zero preservatives.</p>
                     </div>
                     <div class="expanding-card">
-                        <img src="assets/purehoney.webp" alt="Pure Honey" class="img-placeholder">
+                        <img src="assets/purehoney.webp" alt="Pure Honey" class="img-placeholder" loading="lazy" width="400" height="300">
                         <h4 class="serif">Pure Honey</h4>
                         <p class="text-muted small">Raw, unfiltered, straight from the comb. Supporting natural pollination across the farm.</p>
                     </div>
                     <div class="expanding-card">
-                        <img src="assets/juices.webp" alt="Fresh Juices & Flowers" class="img-placeholder">
+                        <img src="assets/juices.webp" alt="Fresh Juices & Flowers" class="img-placeholder" loading="lazy" width="400" height="300">
                         <h4 class="serif">Juices & Blooms</h4>
                         <p class="text-muted small">Cold-pressed from what the season gives us. Cut flowers grown without synthetic chemicals.</p>
                     </div>
