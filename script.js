@@ -141,48 +141,157 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const galleryItems = document.querySelectorAll('.gallery-item img');
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = lightbox ? lightbox.querySelector('.lightbox-img') : null;
     const lightboxClose = lightbox ? lightbox.querySelector('.lightbox-close') : null;
+    const lightboxPrev = lightbox ? lightbox.querySelector('.lightbox-prev') : null;
+    const lightboxNext = lightbox ? lightbox.querySelector('.lightbox-next') : null;
+    
+    let currentGalleryIndex = 0;
+    let scrollPosition = 0;
+    let touchStartY = 0;
+    let touchEndY = 0;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
-    galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const img = item.querySelector('img');
-            if (img && img.src && lightbox) {
-                lightboxImg.src = img.src;
-                lightbox.classList.add('active');
-                body.classList.add('no-scroll');
-            }
-        });
+    const lightboxCounter = document.getElementById('lightbox-counter');
 
-        item.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                item.click();
-            }
-        });
-    });
-
-    const closeLightbox = () => {
-        if(lightbox) {
-            lightbox.classList.remove('active');
-            if (!mobileMenu.classList.contains('active')) {
-                body.classList.remove('no-scroll');
-            }
-            setTimeout(() => { lightboxImg.src = ''; }, 300);
+    const updateLightboxImage = (index) => {
+        if (galleryItems[index] && lightboxImg) {
+            // Initiate fade out
+            lightboxImg.style.opacity = '0';
+            lightboxImg.style.transform = 'scale(0.98)';
+            
+            // Wait for fade out, swap source, then fade in
+            setTimeout(() => {
+                lightboxImg.src = galleryItems[index].src;
+                currentGalleryIndex = index;
+                
+                if (lightboxCounter) {
+                    lightboxCounter.textContent = `${index + 1} / ${galleryItems.length}`;
+                }
+                
+                lightboxImg.onload = () => {
+                    lightboxImg.style.opacity = '1';
+                    lightboxImg.style.transform = 'scale(1)';
+                };
+            }, 200); // 200ms matches the CSS transition speed
         }
     };
 
-    if(lightboxClose) {
-        lightboxClose.addEventListener('click', closeLightbox);
-    }
+    galleryItems.forEach((img, index) => {
+        const itemContainer = img.closest('.gallery-item');
+        if (itemContainer) {
+            itemContainer.addEventListener('click', () => {
+                if (img.src && lightbox) {
+                    updateLightboxImage(index);
+                    lightbox.classList.add('active');
+                    
+                    scrollPosition = window.scrollY;
+                    document.body.style.position = 'fixed';
+                    document.body.style.top = `-${scrollPosition}px`;
+                    document.body.style.width = '100%';
+                    
+                    window.history.pushState({ modalOpen: true }, '', window.location.href);
+                }
+            });
+
+            itemContainer.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') itemContainer.click();
+            });
+        }
+    });
+
+    const closeLightbox = () => {
+        if(lightbox && lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+            
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            
+            // FIX: Temporarily disable smooth scroll to prevent the "roll out" glitch
+            document.documentElement.style.scrollBehavior = 'auto';
+            window.scrollTo(0, scrollPosition);
+            
+            // Re-enable smooth scroll immediately after the jump
+            setTimeout(() => { 
+                document.documentElement.style.scrollBehavior = ''; 
+            }, 50);
+            
+            setTimeout(() => { if (lightboxImg) lightboxImg.src = ''; }, 300);
+        }
+    };
+
+    window.addEventListener('popstate', (event) => {
+        if (lightbox && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    if(lightboxClose) lightboxClose.addEventListener('click', () => {
+        closeLightbox();
+        if (window.history.state && window.history.state.modalOpen) window.history.back();
+    });
+
+    if (lightboxPrev) lightboxPrev.addEventListener('click', (e) => { 
+        e.stopPropagation(); 
+        updateLightboxImage((currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length); 
+    });
+    
+    if (lightboxNext) lightboxNext.addEventListener('click', (e) => { 
+        e.stopPropagation(); 
+        updateLightboxImage((currentGalleryIndex + 1) % galleryItems.length); 
+    });
     
     if(lightbox) {
+        if (lightboxImg) {
+            lightboxImg.style.cursor = 'pointer';
+            lightboxImg.addEventListener('click', (e) => {
+                e.stopPropagation();
+                updateLightboxImage((currentGalleryIndex + 1) % galleryItems.length);
+            });
+        }
+
         lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) {
+            if (e.target === lightbox || e.target.classList.contains('lightbox-content-wrapper')) {
                 closeLightbox();
+                if (window.history.state && window.history.state.modalOpen) window.history.back();
             }
         });
+
+        document.addEventListener('keydown', (e) => {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') {
+                closeLightbox();
+                if (window.history.state && window.history.state.modalOpen) window.history.back();
+            }
+            if (e.key === 'ArrowRight') updateLightboxImage((currentGalleryIndex + 1) % galleryItems.length);
+            if (e.key === 'ArrowLeft') updateLightboxImage((currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length);
+        });
+
+        lightbox.addEventListener('touchstart', e => {
+            touchStartY = e.changedTouches[0].screenY;
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', e => {
+            touchEndY = e.changedTouches[0].screenY;
+            touchEndX = e.changedTouches[0].screenX;
+            
+            const diffY = touchEndY - touchStartY;
+            const diffX = touchEndX - touchStartX;
+            
+            if (Math.abs(diffY) > 80 && Math.abs(diffY) > Math.abs(diffX)) {
+                closeLightbox();
+                if (window.history.state && window.history.state.modalOpen) window.history.back();
+            }
+            else if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+                if (diffX < 0) updateLightboxImage((currentGalleryIndex + 1) % galleryItems.length);
+                else updateLightboxImage((currentGalleryIndex - 1 + galleryItems.length) % galleryItems.length);
+            }
+        }, { passive: true });
     }
 
     const langToggles = document.querySelectorAll('.lang-toggle');
@@ -278,6 +387,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Global Image Protection
+    document.addEventListener('contextmenu', (e) => {
+        if (e.target.tagName === 'IMG') {
+            e.preventDefault();
+        }
+    });
+
     // Image Skeleton Loading Tracker
     document.querySelectorAll('.img-placeholder img').forEach(img => {
         if (img.complete) {
@@ -305,6 +421,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if(cookieBanner) {
             cookieBanner.classList.add('hide-down');
             setTimeout(() => cookieBanner.classList.add('hidden'), 400);
+            
+            // Trigger newsletter slide if user is already past the scroll threshold when accepting cookies
+            const newsletterSlide = document.getElementById('newsletter-slide');
+            if (newsletterSlide && !localStorage.getItem('nf_slide_dismissed') && !window.slideTriggered) {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                const triggerPoint = document.body.offsetHeight * 0.5;
+                if (scrollPosition > triggerPoint) {
+                    setTimeout(() => {
+                        newsletterSlide.classList.add('active');
+                        window.slideTriggered = true;
+                    }, 500);
+                }
+            }
         }
     };
 
@@ -413,18 +542,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Slide-in Newsletter Logic
     const newsletterSlide = document.getElementById('newsletter-slide');
-    let slideTriggered = false;
+    window.slideTriggered = false;
 
     if (newsletterSlide && !localStorage.getItem('nf_slide_dismissed')) {
         window.addEventListener('scroll', () => {
-            if (!slideTriggered) {
-                // Trigger when user scrolls halfway down the page
+            if (!window.slideTriggered) {
+                const cookiesHandled = localStorage.getItem('nf_cookies');
                 const scrollPosition = window.scrollY + window.innerHeight;
                 const triggerPoint = document.body.offsetHeight * 0.5;
                 
-                if (scrollPosition > triggerPoint) {
+                // Only trigger if cookie banner is dismissed to prevent UI overlap
+                if (scrollPosition > triggerPoint && cookiesHandled) {
                     newsletterSlide.classList.add('active');
-                    slideTriggered = true;
+                    window.slideTriggered = true;
                 }
             }
         });

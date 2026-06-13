@@ -83,7 +83,7 @@
     <div class="hero-container">
         <div class="hero-content">
             <span class="eyebrow" data-i18n="hero_eyebrow">Menikhinna, Kandy</span>
-            <h1 class="hero-title serif stagger-text" data-i18n="hero_headline">Fresh from our farm.</h1>
+            <h1 class="hero-title serif stagger-text" data-i18n="hero_headline">Fresh From Our Farm.</h1>
             <p class="hero-sub reveal in-view" data-i18n="hero_sub">Farm-fresh eggs and chicken, raised with care in structured environments. No middlemen, no cold storage. Just real food, direct from Menikhinna to your family.</p>
             <div class="hero-actions reveal in-view">
                 <a href="#products" class="btn btn-primary" data-i18n="hero_cta_primary">Shop the Harvest</a>
@@ -464,8 +464,15 @@
 </a>
 
 <div id="lightbox" class="lightbox-modal">
-    <button class="lightbox-close" aria-label="Close image">×</button>
-    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Gallery View" class="lightbox-img">
+    <div class="lightbox-controls-top">
+        <span class="lightbox-counter" id="lightbox-counter"></span>
+        <button class="lightbox-close" aria-label="Close image"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="lightbox-content-wrapper">
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous image"><i class="ph ph-caret-left"></i></button>
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Gallery View" class="lightbox-img" id="lightbox-img-target">
+        <button class="lightbox-nav lightbox-next" aria-label="Next image"><i class="ph ph-caret-right"></i></button>
+    </div>
 </div>
 
 <div id="toast-notification" class="toast hidden"></div>
